@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		786F7B882EAF8EDF008B9C13 /* SwiftFetch in Frameworks */ = {isa = PBXBuildFile; productRef = 786F7B872EAF8EDF008B9C13 /* SwiftFetch */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		786F7B782EAF8EAC008B9C13 /* SampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -23,6 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				786F7B882EAF8EDF008B9C13 /* SwiftFetch in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +70,7 @@
 			);
 			name = SampleApp;
 			packageProductDependencies = (
+				786F7B872EAF8EDF008B9C13 /* SwiftFetch */,
 			);
 			productName = SampleApp;
 			productReference = 786F7B782EAF8EAC008B9C13 /* SampleApp.app */;
@@ -94,6 +100,9 @@
 			);
 			mainGroup = 786F7B6F2EAF8EAC008B9C13;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				786F7B862EAF8EDF008B9C13 /* XCLocalSwiftPackageReference "../../SwiftFetch" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 786F7B792EAF8EAC008B9C13 /* Products */;
 			projectDirPath = "";
@@ -345,6 +354,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		786F7B862EAF8EDF008B9C13 /* XCLocalSwiftPackageReference "../../SwiftFetch" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../../SwiftFetch;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		786F7B872EAF8EDF008B9C13 /* SwiftFetch */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SwiftFetch;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 786F7B702EAF8EAC008B9C13 /* Project object */;
 }
