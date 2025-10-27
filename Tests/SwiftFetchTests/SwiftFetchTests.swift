@@ -104,7 +104,7 @@ class DataFetcherTests: XCTestCase {
         
         switch fetchState {
         case .failure(let error):
-            XCTAssertEqual(error, "Failed to fetch data with status code: 404")
+            XCTAssertEqual(error.description, "Failed response with status code: 404")
         default:
             XCTFail("Expected a .failure result")
         }
@@ -129,7 +129,7 @@ class DataFetcherTests: XCTestCase {
         
         switch fetchState {
         case .failure(let error):
-            XCTAssertEqual(error, "Failed to decode response")
+            XCTAssertEqual(error.description, "Failed to decode data")
         default:
             XCTFail("Expected a .failure result")
         }

@@ -11,5 +11,5 @@ enum FetchResult<T: Equatable>: Equatable {
     case success(T)
     case idle
     case fetching
-    case failure(String)
+    case failure(FetchError)
 }

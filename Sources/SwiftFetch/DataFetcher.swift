@@ -23,18 +23,18 @@ struct DataFetcher {
                 httpResponse.statusCode == 200
             else {
                 let errorCode = (response as? HTTPURLResponse)?.statusCode ?? -1
-                responseHandler(.failure("Failed to fetch data with status code: \(errorCode)"))
+                responseHandler(.failure(.failedResponse(errorCode)))
                 return
             }
             
             guard let decoded = try? JSONDecoder().decode(T.self, from: data) else {
-                responseHandler(.failure("Failed to decode response"))
+                responseHandler(.failure(.failedToDecode))
                 return
             }
             
             return responseHandler(.success(decoded))
         } catch {
-            responseHandler(.failure(error.localizedDescription))
+            responseHandler(.failure(.unknown(error.localizedDescription)))
         }
     }
 }
