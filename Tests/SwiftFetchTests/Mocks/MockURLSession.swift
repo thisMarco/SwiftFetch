@@ -8,10 +8,11 @@
 @testable import SwiftFetch
 import Foundation
 
-struct MockURLSession: Fetcher {
+struct MockURLSession: Fetchable {
     var mockData: Data = .init()
+    var mockResponse: HTTPURLResponse = HTTPURLResponse()
     
     func data(from url: URL) async throws -> (Data, URLResponse) {
-        (mockData, URLResponse())
+        (mockData, mockResponse)
     }
 }
