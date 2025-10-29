@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol Fetchable {
+public protocol Fetchable {
     func data(from url: URL) async throws -> (Data, URLResponse)
 }
 
