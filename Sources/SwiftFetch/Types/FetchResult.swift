@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum FetchResult<T: Equatable>: Equatable {
+public enum FetchResult<T: Equatable>: Equatable {
     case success(T)
     case idle
     case fetching

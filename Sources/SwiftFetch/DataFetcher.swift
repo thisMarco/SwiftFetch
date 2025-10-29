@@ -7,14 +7,14 @@
 
 import Foundation
 
-struct DataFetcher {
+public struct DataFetcher {
     private let fetcher: Fetchable
     
-    init(fetcher: Fetchable = URLSession.shared) {
+    public init(fetcher: Fetchable = URLSession.shared) {
         self.fetcher = fetcher
     }
     
-    func fetch<T: Decodable>(_ type: T.Type, from url: URL, responseHandler: ((FetchResult<T>) -> Void)) async {
+    public func fetch<T: Decodable>(_ type: T.Type, from url: URL, responseHandler: ((FetchResult<T>) -> Void)) async {
         do {
             let (data, response) = try await fetcher.data(from: url)
             

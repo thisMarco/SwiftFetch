@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  FetchError.swift
 //  SwiftFetch
 //
 //  Created by Marco Picchillo on 27/10/2025.
@@ -7,12 +7,12 @@
 
 import Foundation
 
-enum FetchError: Equatable {
+public enum FetchError: Equatable {
     case failedToDecode
     case failedResponse(Int)
     case unknown(String)
     
-    var description: String {
+    public var message: String {
         switch self {
         case .failedToDecode:
             "Failed to decode data"
